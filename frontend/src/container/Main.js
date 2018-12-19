@@ -13,6 +13,7 @@ class Main extends Component {
     ping() {
         axios.get("http://localhost:8080/pong").then(res => {
             alert("Received Successful response from server!");
+            this.setState({ponged: 'Ponged! '});
         }, err => {
             alert("Server rejected response with: " + err);
         });
